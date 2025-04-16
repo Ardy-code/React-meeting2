@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  font-family: "Merriweather", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+  flex-shrink: 0;
+  width: 200px;
+  background-color: #242526;
+  height: 100vh;
+  position: fixed; /* tetap */
+  left: 0;
+  top: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar .logo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.sidebar .logo img {
+  width: 100px;
+}
+
+.sidebar .logo-name {
   color: white;
+  font-size: 14px;
+  margin-top: 35px;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-links {
+  margin-top: 40px;
+  list-style: none;
+}
+.nav-links {
+  margin-bottom: 30px; /* kasih jarak antar menu item */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.icon {
+  background-color: red;
+  font-size: 14px;
+  margin-right: 40px;
+}
+
+.text.nav-text {
+  color: white;
+  font-size: 14px;
+}
+
+.bottom-content {
+  margin-top: 120px;
+  list-style: none;
+}
+
+.bottom-content a {
+  text-decoration: none;
+}
+.dashboard-container {
+  margin-left: 200px; /* kasih jarak sesuai lebar sidebar */
+
+  height: 100vh;
+  flex-grow: 1;
+  padding: 20px;
+  color: white;
+  background-color: black;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.welcome-section h1 {
+  color: #b197fc;
+  margin: 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.user-details .user-name {
+  margin: 0;
+  font-size: 14px;
+}
+
+.summary-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #b197fc;
+  flex: 1;
+  min-width: 200px;
+}
+
+.details-section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #b197fc;
+}
+
+.recent-transactions .see-all {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.recent-transactions table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.recent-transactions th,
+.recent-transactions td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  text-align: left;
+}
+
+.recent-transactions th {
+  background-color: #f5f5f5;
+  color: #6c5ce7;
+}
+
+.action {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.action.edit:hover {
+  color: #6c5ce7;
+}
+
+.action.delete:hover {
+  color: red;
+}
+
+.transaction-form {
+  padding: 20px;
+}
+
+.transaction-list {
+  margin-top: 50px;
 }
