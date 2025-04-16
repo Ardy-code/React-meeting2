@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./TransactionForm.css";
 
 function TransactionForm({ onAdd }) {
   const [type, setType] = useState("income"); // income or expense

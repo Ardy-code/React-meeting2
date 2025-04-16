@@ -1,0 +1,17 @@
+.transaction-list {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  background-color: white;
+  color: #000000;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: visible; /* tambahkan ini jika terpotong */
+}
+
+.transaction-list h2 {
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}

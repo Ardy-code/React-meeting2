@@ -80,6 +80,7 @@ function App() {
           </div>
         </header>
         <TransactionForm onAdd={addTransaction} />
+
         <TransactionList transactions={transactions} />
       </div>
     </div>
