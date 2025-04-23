@@ -3,9 +3,8 @@ import logo from "./People_Dollar_logo__Money_Finances_logo-removebg-preview.png
 import "./App.css";
 import Stateless from "./Components/Stateless";
 import Profile from "./Components/Profile";
-import TransactionForm from "./Components/TransactionForm";
-import TransactionList from "./Components/TransactionsList";
 import Nama from "./Components/Nama";
+import TransactionTable from "./Components/TransactionTable";
 
 function App() {
   const [transactions, setTransactions] = useState([]);
@@ -73,15 +72,12 @@ function App() {
             <div className="user-info">
               <img src="img/user.jpeg" alt="User Avatar" className="avatar" />
               <div className="user-details">
-                <Nama />
-                <Profile email="ardy9949@gmail.com" />
+                <Profile name="Ardya Pratama" email="ardy9949@gmail.com" />
               </div>
             </div>
           </div>
         </header>
-        <TransactionForm onAdd={addTransaction} />
-
-        <TransactionList transactions={transactions} />
+        <TransactionTable />
       </div>
     </div>
   );
